@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,14 +59,14 @@
             transition: color 0.3s ease;
         }
 
-         nav a:hover {
+        nav a:hover {
             color: #ddd;
         }
-
 
         .search-bar {
             margin-top: 20px;
         }
+
         .search-bar input {
             padding: 10px;
             width: 70%;
@@ -75,7 +74,7 @@
             border-radius: 5px;
         }
 
-         .search-bar button {
+        .search-bar button {
             padding: 10px 15px;
             background-color: #4CAF50;
             color: white;
@@ -83,10 +82,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .search-bar button:hover{
+
+        .search-bar button:hover {
             background-color: #367c39;
         }
-       
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -95,42 +95,44 @@
         }
 
         .product-card {
-             background: white;
+            background: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        .product-card:hover{
-             transform: translateY(-5px);
+
+        .product-card:hover {
+            transform: translateY(-5px);
         }
 
         .product-card img {
-             width: 100%;
+            width: 100%;
             height: 200px;
-            object-fit: cover;
+            object-fit: cover; /* Ensure images fit properly */
         }
 
-        .product-card h3{
-           padding: 10px;
-           font-size: 1.2em;
-           color: #333;
+        .product-card h3 {
+            padding: 10px;
+            font-size: 1.2em;
+            color: #333;
         }
 
-        .product-card p{
+        .product-card p {
             padding: 0 10px 10px;
         }
 
         .product-card button {
             display: block;
             width: 100%;
-             padding: 10px;
+            padding: 10px;
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
         }
-        .product-card button:hover{
+
+        .product-card button:hover {
             background-color: #367c39;
         }
 
@@ -139,12 +141,14 @@
             flex-direction: column;
             margin-top: 20px;
         }
-        .auth-form input{
+
+        .auth-form input {
             padding: 10px;
             margin-bottom: 10px;
-             border: 1px solid #ddd;
+            border: 1px solid #ddd;
             border-radius: 5px;
         }
+
         .auth-form button {
             padding: 10px 15px;
             background-color: #4CAF50;
@@ -153,10 +157,10 @@
             border-radius: 5px;
             cursor: pointer;
         }
-         .auth-form button:hover{
+
+        .auth-form button:hover {
             background-color: #367c39;
         }
-
 
         .cart {
             margin-top: 20px;
@@ -164,56 +168,63 @@
             padding: 15px;
             border-radius: 8px;
         }
-         .cart ul {
+
+        .cart ul {
             margin-top: 10px;
         }
+
         .cart li {
             display: flex;
-             justify-content: space-between;
+            justify-content: space-between;
             padding: 5px 0;
-             border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eee;
         }
+
         .cart li:last-child {
             border-bottom: none;
         }
+
         .cart .total {
             font-weight: bold;
             margin-top: 10px;
             text-align: right;
         }
 
-
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-             padding: 20px 0;
+            padding: 20px 0;
             margin-top: 40px;
         }
 
-
         /* Mobile Responsiveness */
-         @media (max-width: 768px) {
+        @media (max-width: 768px) {
             .container {
                 width: 95%;
                 padding: 10px;
             }
+
             header .container {
                 flex-direction: column;
                 align-items: flex-start;
             }
+
             nav ul {
                 margin-top: 10px;
                 flex-direction: column;
-             }
+            }
+
             nav ul li {
                 margin-left: 0;
                 margin-bottom: 10px;
             }
+
             .search-bar input {
                 width: 100%;
             }
-             .products-grid{
+
+            .products-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -243,108 +254,103 @@
         </div>
 
         <section class="products-grid">
-             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1607082348812-e94e14760324?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JvY2VyaWVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Product 1">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1607082348812-e94e14760324?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGdyb2Nlcmllc3xlbnwwfDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Fresh Apples">
                 <h3>Fresh Apples</h3>
                 <p>Crispy and delicious apples.</p>
                 <button>Add to Cart</button>
             </div>
-             <div class="product-card">
-                 <img src="https://images.unsplash.com/photo-1557800888-74768f1f2c9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGdyb2Nlcmllc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Product 2">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1557800888-74768f1f2c9d?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDB8fGdyb2Nlcmllc3xlbnwwfDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Organic Bananas">
                 <h3>Organic Bananas</h3>
                 <p>Sweet and healthy bananas.</p>
                 <button>Add to Cart</button>
             </div>
-             <div class="product-card">
-                  <img src="https://images.unsplash.com/photo-1586218754174-694435d9499b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGdyb2Nlcmllc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Product 3">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1586218754174-694435d9499b?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGdyb2Nlcmllc3xlbnwwfDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Fresh Milk">
                 <h3>Fresh Milk</h3>
                 <p>Pure and rich milk.</p>
-                 <button>Add to Cart</button>
-             </div>
-              <div class="product-card">
-                  <img src="https://images.unsplash.com/photo-1633016600071-0d0526f00486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGdyb2Nlcmllc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Product 4">
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1633016600071-0d0526f00486?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGdyb2Nlcmllc3xlbnwwfDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Whole Wheat Bread">
                 <h3>Whole Wheat Bread</h3>
                 <p>Nutritious whole wheat bread.</p>
-                 <button>Add to Cart</button>
+                <button>Add to Cart</button>
             </div>
-              <div class="product-card">
-                 <img src="https://images.unsplash.com/photo-1596462548540-4dd5b4841b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGdyb2Nlcmllc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Product 5">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1596462548540-4dd5b4841b2a?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGdyb2Nlcmllc3xlbnwwfDB8fHx8&ixlib=rb-1.2.1&q=80&w=400" alt="Ground Coffee">
                 <h3>Ground Coffee</h3>
-                 <p>Rich and aromatic coffee.</p>
+                <p>Rich and aromatic coffee.</p>
                 <button>Add to Cart</button>
             </div>
         </section>
 
-          <section class="auth-form" id="login-form" style="display: none">
-              <h2>Login</h2>
-              <input type="email" placeholder="Email" required>
-              <input type="password" placeholder="Password" required>
-              <button>Login</button>
-          </section>
-           <section class="auth-form" id="register-form" style="display: none">
-               <h2>Register</h2>
-              <input type="text" placeholder="Username" required>
-              <input type="email" placeholder="Email" required>
-              <input type="password" placeholder="Password" required>
-              <button>Register</button>
-          </section>
+        <section class="auth-form" id="login-form" style="display: none">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Login</button>
+        </section>
+        <section class="auth-form" id="register-form" style="display: none">
+            <h2>Register</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Register</button>
+        </section>
 
-           <section class="cart" id="shopping-cart" style="display: none">
-               <h2>Shopping Cart</h2>
-               <ul>
-                  <li>
-                      <span>Fresh Apples x 1</span>
-                      <span>$2.50</span>
-                  </li>
-                   <li>
-                       <span>Organic Bananas x 2</span>
-                        <span>$1.80</span>
-                   </li>
-                </ul>
-                <div class="total">Total: $4.30</div>
-                <button>Checkout</button>
-           </section>
+        <section class="cart" id="shopping-cart" style="display: none">
+            <h2>Shopping Cart</h2>
+            <ul>
+                <li>
+                    <span>Fresh Apples x 1</span>
+                    <span>$2.50</span>
+                </li>
+                <li>
+                    <span>Organic Bananas x 2</span>
+                    <span>$1.80</span>
+                </li>
+            </ul>
+            <div class="total">Total: $4.30</div>
+            <button>Checkout</button>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 FreshCart. All Rights Reserved.</p>
     </footer>
-     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-                const loginLink = document.querySelector('header nav ul li:nth-child(5) a');
-                const registerLink = document.querySelector('header nav ul li:nth-child(6) a');
-                const loginForm = document.getElementById('login-form');
-                const registerForm = document.getElementById('register-form');
-                const cartSection = document.getElementById('shopping-cart')
+            const loginLink = document.querySelector('header nav ul li:nth-child(5) a');
+            const registerLink = document.querySelector('header nav ul li:nth-child(6) a');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const cartSection = document.getElementById('shopping-cart');
 
+            loginLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginForm.style.display = 'flex';
+                registerForm.style.display = 'none';
+                cartSection.style.display = 'none';
+            });
 
-                loginLink.addEventListener('click', function(e) {
-                   e.preventDefault();
-                  loginForm.style.display = 'flex';
-                  registerForm.style.display = 'none';
-                  cartSection.style.display ='none';
-              });
+            registerLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                registerForm.style.display = 'flex';
+                loginForm.style.display = 'none';
+                cartSection.style.display = 'none';
+            });
 
-
-                registerLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                  registerForm.style.display = 'flex';
-                  loginForm.style.display = 'none';
-                  cartSection.style.display = 'none';
-
-               });
-        const addToCartButtons = document.querySelectorAll('.product-card button');
+            const addToCartButtons = document.querySelectorAll('.product-card button');
             addToCartButtons.forEach(button => {
-                button.addEventListener('click', function(){
-                cartSection.style.display = 'block';
-                loginForm.style.display ='none';
-                 registerForm.style.display = 'none';
-                  alert('Added to cart!');
-
-                  });
-              });
+                button.addEventListener('click', function() {
+                    cartSection.style.display = 'block';
+                    loginForm.style.display = 'none';
+                    registerForm.style.display = 'none';
+                    alert('Added to cart!');
+                });
+            });
         });
     </script>
 </body>
 </html>
-
-
