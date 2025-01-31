@@ -4,79 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Cart</title>
+    <title>Fresh Cart - Your Online Grocery Store</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">Fresh Cart</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button>Search</button>
+            </div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="#">Categories</a></li>
                 <li><a href="#">Cart (<span id="cart-count">0</span>)</a></li>
-                <li><a href="#">Login/Register</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <section class="hero">
-            <h1>Your Fresh Groceries, Delivered.</h1>
-            <p>Get the freshest produce, pantry staples, and more delivered to your doorstep.</p>
-            <button>Shop Now</button>
-        </section>
-        
-        <section class="products">
-            <h2>Featured Products</h2>
-            <div class="product-list">
-              
-            </div>
-        </section>
-    </main>
+
+    <main id="root">
+        </main>
 
     <footer>
         <p>&copy; 2024 Fresh Cart. All rights reserved.</p>
     </footer>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div id="modal-content-area"></div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <script type="text/babel" src="script.js"></script>
+
 </body>
 </html>
 
 
 css
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
 header {
-    background: #f8f8f8;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: bold;
-    color: #333;
+}
+
+.search-bar {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -92,255 +102,91 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #555;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: #007bff;
+    color: #333;
 }
 
 main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 0;
-}
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.hero button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.hero button:hover {
-    background-color: #0056b3;
-}
-
-.products {
-    margin-top: 30px;
-}
-
-.products h2 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.product-list {
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
-
 .product-card {
     border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 10px;
     text-align: center;
 }
-
 .product-card img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 10px;
 }
-
-.product-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.product-card p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 10px;
-}
-.product-card button{
-    background-color: #007bff;
+.product-card button {
+    background-color: #5cb85c;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 8px 12px;
     cursor: pointer;
-    font-size: 1rem;
+    border-radius: 4px;
+    margin-top: 10px;
 }
-
-.product-card button:hover {
-    background-color: #0056b3;
-}
-
 footer {
     text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+    padding: 10px 0;
     background-color: #f8f8f8;
-    border-top: 1px solid #eee;
-}
-.modal {
-    display: none;
+    border-top: 1px solid #ddd;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    position: relative;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-    .nav-links li {
-        margin: 10px 0;
-    }
 }
 
 
 javascript
-document.addEventListener('DOMContentLoaded', () => {
-    const productListDiv = document.querySelector('.product-list');
-    const cartCountSpan = document.getElementById('cart-count');
-    const modal = document.getElementById('modal');
-    const modalContentArea = document.getElementById('modal-content-area');
-    const closeButton = document.querySelector('.close-button');
-    let cartCount = 0;
-    
-    const products = [
-        {
-            id: 1,
-            name: 'Fresh Apples',
-            description: 'Crisp and delicious red apples.',
-            price: 2.99,
-            image: 'https://placekitten.com/200/150',
-        },
-        {
-            id: 2,
-            name: 'Organic Bananas',
-            description: 'Ripe and sweet organic bananas.',
-            price: 1.99,
-            image: 'https://placekitten.com/201/150',
-        },
-         {
-            id: 3,
-            name: 'Juicy Oranges',
-            description: 'Fresh and tangy oranges.',
-            price: 3.49,
-             image: 'https://placekitten.com/202/150'
-        }
-    ];
-    function generateProductCard(product){
-        return `
-        <div class="product-card">
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <p>Price: $${product.price.toFixed(2)}</p>
-            <button data-product-id="${product.id}" class="addToCartBtn">Add to Cart</button>
-            <button data-product-id="${product.id}" class="viewDetailsBtn">View Details</button>
+const products = [
+    { id: 1, name: 'Apples', price: 1.00, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Apples' },
+    { id: 2, name: 'Bananas', price: 0.75, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Bananas' },
+    { id: 3, name: 'Milk', price: 3.00, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Milk' },
+    { id: 4, name: 'Bread', price: 2.50, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Bread' },
+    { id: 5, name: 'Eggs', price: 2.00, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Eggs' },
+    { id: 6, name: 'Yogurt', price: 1.50, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Yogurt' },
+    { id: 7, name: 'Chicken', price: 10.00, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Chicken' },
+    { id: 8, name: 'Salmon', price: 12.00, imageUrl: 'https://placehold.co/200x150/000000/FFFFFF/png?text=Salmon' },
+];
+let cart = [];
+function App(){
+
+    const handleAddToCart = (product) => {
+            cart.push(product);
+            updateCartDisplay();
+    };
+
+    const updateCartDisplay = () => {
+            document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    const ProductCard = ({ product }) => (
+        <div className="product-card">
+            <img src={product.imageUrl} alt={product.name} />
+            <h3>{product.name}</h3>
+            <p>${product.price.toFixed(2)}</p>
+            <button onClick={() => handleAddToCart(product)}>Add to Cart</button>
         </div>
-        `;
-    }
-    
-    function renderProducts(){
-        productListDiv.innerHTML = products.map(product => generateProductCard(product)).join('');
-    }
+    );
 
-    function updateCartCount() {
-        cartCountSpan.textContent = cartCount;
-    }
-    function handleAddToCart(productId) {
-        cartCount++;
-        updateCartCount();
-        console.log(`Product ${productId} added to cart. Total items: ${cartCount}`);
-    }
-    function showModal(productId){
-        const product = products.find(product => product.id == productId);
-        modalContentArea.innerHTML = `
-            <h2>${product.name}</h2>
-            <img src="${product.image}" alt="${product.name}" style="max-width: 300px; display: block; margin: 0 auto; margin-bottom: 20px;">
-            <p>Description: ${product.description}</p>
-            <p>Price: $${product.price.toFixed(2)}</p>
-            <button class="addToCartBtn" data-product-id="${product.id}">Add to Cart</button>
-            
-        `;
-        modal.style.display = 'block';
-        const addToCartButton = modalContentArea.querySelector('.addToCartBtn');
-        addToCartButton.addEventListener('click',() => {
-             handleAddToCart(productId);
-             modal.style.display = 'none';
-        })
-    }
+    return (
+        <div className="product-grid">
+            {products.map(product => (
+                <ProductCard key={product.id} product={product} />
+            ))}
+        </div>
+    );
+}
 
-    productListDiv.addEventListener('click', (event) => {
-        if (event.target.classList.contains('addToCartBtn')) {
-            const productId = event.target.getAttribute('data-product-id');
-            handleAddToCart(productId);
-        }
-         if (event.target.classList.contains('viewDetailsBtn')) {
-            const productId = event.target.getAttribute('data-product-id');
-           showModal(productId);
-        }
-    });
-    closeButton.addEventListener('click',() =>{
-        modal.style.display = 'none';
-    })
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-    renderProducts();
-});
+ReactDOM.render(<App />, document.getElementById('root'));
 
 
